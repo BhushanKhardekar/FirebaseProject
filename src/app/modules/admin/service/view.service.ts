@@ -8,6 +8,8 @@ export class ViewService {
 
   constructor(private http: HttpClient) { }
 
+  jsonUrl = 'https://fir-project-bk-default-rtdb.asia-southeast1.firebasedatabase.app/'
+
   urlPost = 'https://jsonplaceholder.typicode.com/posts';
   urlUser = 'https://jsonplaceholder.typicode.com/users';
   urlTodo = 'https://jsonplaceholder.typicode.com/todos'
