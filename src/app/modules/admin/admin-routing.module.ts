@@ -7,18 +7,20 @@ import { ViewsUserComponent } from './components/views-user/views-user.component
 
 const routes: Routes = [
   {
-    path: "", component: ViewsContainerComponent,
+    path: '',
+    component: ViewsContainerComponent,
     children: [
-      { path: "post", component: ViewsPostComponent },
-      { path: "user", component: ViewsUserComponent },
-      { path: "todo", component: ViewsTodoComponent },
-      { path: "", redirectTo:"post", pathMatch:"full" }
-    ]
+      { path: 'post', component: ViewsPostComponent },
+      { path: 'user', component: ViewsUserComponent },
+      { path: 'todo', component: ViewsTodoComponent },
+      { path: '', redirectTo: 'post', pathMatch: 'full' },
+      { path: '**', redirectTo: 'post', pathMatch: 'full' },
+    ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}
